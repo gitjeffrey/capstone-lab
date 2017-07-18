@@ -1,0 +1,51 @@
+[1;33mWarning: /etc/puppetlabs/puppet/hiera.yaml: Use of 'hiera.yaml' version 3 is deprecated. It should be converted to version 5
+   (in /etc/puppetlabs/puppet/hiera.yaml)[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/init.pp", 142]:
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Bool. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/init.pp", 143]:
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Hash. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/init.pp", 153]:
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Absolute_Path. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/init.pp", 159]:
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;33mWarning: The function 'hiera_hash' is deprecated in favor of using 'lookup'. See https://docs.puppet.com/puppet/4.9.4/reference/deprecated_language.html
+   (file & line not available)[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/packages.pp", 29]:
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Pattern[]. There is further documentation for validate_legacy function in the README. at ["/etc/puppetlabs/code/environments/production/modules/php/manifests/fpm/config.pp", 109]:["/etc/puppetlabs/code/environments/production/modules/php/manifests/init.pp", 204]
+   (at /etc/puppetlabs/code/environments/production/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+[1;31mError: Execution of '/bin/rpm -e php-cli-5.4.16-42.el7.x86_64' returned 1: error: Failed dependencies:
+	php-cli is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-cli(x86-64) = 5.4.16-42.el7 is needed by (installed) php-devel-5.4.16-42.el7.x86_64[0m
+[1;31mError: /Stage[main]/Php::Packages/Package[php-cli]/ensure: change from 5.4.16-42.el7 to absent failed: Execution of '/bin/rpm -e php-cli-5.4.16-42.el7.x86_64' returned 1: error: Failed dependencies:
+	php-cli is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-cli(x86-64) = 5.4.16-42.el7 is needed by (installed) php-devel-5.4.16-42.el7.x86_64[0m
+[1;31mError: Execution of '/bin/rpm -e php-common-5.4.16-42.el7.x86_64' returned 1: error: Failed dependencies:
+	php-bz2 is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-ftp is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-pcre is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-tokenizer is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-zlib is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-cli-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-fpm-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-process-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-xml-5.4.16-42.el7.x86_64[0m
+[1;31mError: /Stage[main]/Php::Packages/Package[php-common]/ensure: change from 5.4.16-42.el7 to absent failed: Execution of '/bin/rpm -e php-common-5.4.16-42.el7.x86_64' returned 1: error: Failed dependencies:
+	php-bz2 is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-ftp is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-pcre is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-tokenizer is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-zlib is needed by (installed) php-pear-1:1.9.4-21.el7.noarch
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-cli-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-fpm-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-process-5.4.16-42.el7.x86_64
+	php-common(x86-64) = 5.4.16-42.el7 is needed by (installed) php-xml-5.4.16-42.el7.x86_64[0m
+[1;33mWarning: /Stage[main]/Php::Fpm/Package[php-fpm]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Fpm::Config/File[/etc/php-fpm.conf]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Fpm::Config/File[/etc/php-fpm.d]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Dev/Package[php-devel]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Pear/Package[php-pear]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php/Anchor[php::end]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php-fpm.d/www.conf]: Skipping because of failed dependencies[0m
+[1;33mWarning: /Stage[main]/Php::Fpm::Service/Service[php-fpm]: Skipping because of failed dependencies[0m

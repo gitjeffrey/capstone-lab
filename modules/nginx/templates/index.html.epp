@@ -1,0 +1,10 @@
+<html>
+<title>
+  Puppet Fundamentals nginx Web Page
+</title>
+<body>
+<h1>Puppet Lab</h1>
+Hostname: <%= $fqdn %> <br>
+Certname: <%= $trusted['certname']  %> <br>
+</body>
+</html>

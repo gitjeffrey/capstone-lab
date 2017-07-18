@@ -1,14 +1,12 @@
 class nginx (
-  String $paramdocroot   = $nginx::params::docroot,
-  Boolean $paramhighperf = $nginx::params::highperf,
+  String $paramdocroot   = ::nginx::params::docroot,
+  Boolean $paramhighperf = ::nginx::params::highperf,
 ) inherits nginx::params {
 
   $osfamily = 'Jeff'
   notify { "${::osfamily}, ${osfamily}": }
 
   notice ("pkgname = ${pkgname}")
-  notice ("paramdocroot = ${paramdocroot}")
-  notice ("paramhighperf = ${paramhighperf}")
 
   package { $pkgname:
     ensure => present,
