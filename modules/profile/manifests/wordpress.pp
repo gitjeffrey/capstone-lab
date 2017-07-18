@@ -15,7 +15,7 @@ class profile::wordpress {
   class { 'wordpress':
     wp_owner    => 'wordpress',
     wp_group    => 'wordpress',
-    db_name     => 'wordpress_mysqldb',
+    db_name     => 'wordpress_db',
     db_user     => 'wordpress',
     db_password => 'wordpress',
     install_dir => '/opt/wordpress',
@@ -23,5 +23,8 @@ class profile::wordpress {
   }
 
   # add firewalld configuration
+
+  # test using the url...
+  # http://localhost/wp-admin
 
 }
